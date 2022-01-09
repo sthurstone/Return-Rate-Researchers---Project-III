@@ -1,0 +1,10 @@
+.box {
+    height: 350px;
+    padding: 20px;
+    color: #fff;
+    background: rgb(247, 250, 249);
+    background-repeat: no-repeat;
+  }  
+  .margin-top-50 {
+    margin-top: 50px;
+  }
