@@ -12,6 +12,7 @@ var historyTitleEl = document.querySelector("#history-title");
 var searchHistoryButtonsEl = document.querySelector("#search-history-buttons");
 var weatherFilter = document.getElementById("weather-filter");
 // weather global variables
+var container2 = document.querySelector("#container-2")
 var columnThreeElement = document.querySelector("#column-three");
 var forecast1 = document.querySelector("#forecast-1");
 var forecast2 = document.querySelector("#forecast-2");
@@ -624,6 +625,7 @@ function getWeatherData(weatherDisaply) {
              dailyWind5.textContent = 'Wind: ' + wind5 + '  MPH'
              dailyHum5.textContent = 'Humidity: ' + hum5 + '%'
         });
+        container2.classList.remove("card-hidden");
 }
 
 function loadFromSearch(event) {
@@ -635,6 +637,7 @@ function loadFromSearch(event) {
     displayItinerary(currentLoad);
 }
 
+
 function loadPage() {
     var getHistory = JSON.parse(localStorage.getItem("search-history"));
 }
@@ -643,7 +646,6 @@ function loadPage() {
 loadPage();
 
 // event listener for submit click (user input)
-searchForm.addEventListener("submit", getUserInput)
-searchFrom.addEventListener("submit", getWeatherData)
+searchForm.addEventListener("submit", getUserInput )
 
 console.log('Bye')
