@@ -17,7 +17,7 @@
   crossorigin=""/>
 
       <!-- Our JavaScript file -->
-    <script src='hotel.js'></script>
+    <script src='smaller hotel.js'></script>
     
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -59,7 +59,9 @@
                             feature.properties.Address + '<br />' + 
                             feature.properties.City + '<br />' + 
                             feature.properties.State + '<br />' + 
-                            feature.properties["Postal Code"]);
+                            feature.properties["Postal Code"] + '<br />' + 
+                            feature.properties["Review Rating"] + '<br />' + 
+                            feature.properties.websites);
                         },
         pointToLayer: function (feature, latlng) {
                 return L.circleMarker(latlng, overlayStylesOpen);
