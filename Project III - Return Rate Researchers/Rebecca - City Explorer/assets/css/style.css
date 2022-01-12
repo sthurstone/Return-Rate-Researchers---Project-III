@@ -1,0 +1,147 @@
+/* styling */
+:root {
+    --background-color: #76a8ff;
+    --background-text: white;
+    --border-color: black;
+    --inner-color: #F8F8FF;
+    --button-color: #30336b;
+    --hover-color: #6495ED;
+}
+
+html,
+body,
+main {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    background-color: #c8def0;
+    height: auto;
+    min-height: 100vh;
+}
+
+.button {
+    background-color: var(--button-color);
+    border-radius: 5px;
+}
+
+/* Header styling */
+.hero {
+    background-color: var(--background-color);
+    color: var(--background-text);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.title {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Main container */
+.container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.invalid-search {
+    border: solid red;
+    display: block;
+    padding: 0;
+    margin: 0;
+    background-color: red;
+    color: white;
+}
+
+/* search button and input */
+.city-input {
+    margin: 5px 10px 5px 0;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.search-button {
+    background-color: var(--button-color);
+    color: var(--background-text);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    font-size: 20px;
+    margin-left: -4px;
+}
+
+.search-button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Styling for pull down filters */
+.search-form label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#food-filter,
+#event-filter {
+    background-color: var(--inner-color);
+}
+
+/* Itinerary formatting */
+.event {
+    width: 100%;
+    background-color: #30336b;
+    color: var(--background-text);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.itinerary {
+    border-radius: 10px; 
+}
+
+#itinerary-list {
+    background-color: var(--inner-color);
+}
+
+#itinerary-title {
+    background-color: #76a8ff;
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* Map styling */
+.map-area {
+    border-radius: 10px;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.event {
+    width: 100%;
+    background-color: #30336b;
+    color: var(--background-text);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 5px;
+    text-align: left;
+}

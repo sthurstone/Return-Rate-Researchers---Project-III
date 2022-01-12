@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <!-- Bootstrap CDN -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <div id="map-script-container"></div>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>City Explorer</title>
+</head>
+
+<body>
+    <header class="hero">
+        <h1 class="title">City Explorer</h1>
+    </header>
+
+        <!-- Navigation Bar -->
+        <div class= "top text-left"></div>
+        <b>Navigation</b>
+        <div id="Navigation">
+        <a href="{{ url_for('index') }}">Dashboard</a> <br>
+        <a href="{{ url_for('Membership') }}">Membership</a><br>
+        <a href="{{ url_for('Contact') }}">Contact</a>
+        <br> <br> 
+
+    <main>
+        <!--use Foundation grid for 3-column lay-out-->
+        <div class="grid-x grid-margin-x grid-margin-y container">
+
+            <!--column 1: city input, food pull-down, event pull-down-->
+            <div class="cell small-12 large-3">
+
+                <!--column 1 wrapper-->
+                <div class="column-1">
+
+                    <!--search input area-->
+                    <form id="search-form" class="search-form">
+                        <label>Search by City, State:</br></label>
+                        <input id="city-input" class="city-input" placeholder="ex. Boston, MA">
+                        <button id="search-button" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+
+                    <!--food options pull-down-->
+                    <label>Type of Food
+                        <select id="food-filter">
+                            <option value="American">American</option>
+                            <option value="Italian">Italian</option>
+                            <option value="Asian">Asian</option>
+                            <option value="Vegetarian Friendly">Vegetarian</option>
+                            <option value="Vegan Options">Vegan</option>
+                        </select>
+                    </label>
+
+                    <!--event options pull-down-->
+                    <label>Type of Event
+                        <select id="event-filter">
+                            <option value="Tours">Tours</option>
+                            <option value="Sights & Landmarks">Sights & Landmarks</option>
+                        </select>
+                    </label>
+
+                </div>
+            </div>
+
+            <!--column 2: itinerary area-->
+            <div id="column-two" class="cell small-12 large-3"></div>
+
+            <!--column 3: map area that shows the directions from place to place-->
+            <div class="cell small-12 medium-6 large-6">
+                <div id="map" style="float:left;width:100%;height:100%"></div>
+            </div>
+
+            <!-- covid data -->
+            <!-- <div class="grid-x"> -->
+            <div class="grid-y medium-grid-frame">
+                <div class="cell medium-6 large-3">
+                    <section style="width:15vw; background-color:royalblue; color: white;">
+                        <h1 id="cityName"> <span id="icon"></span></h1>
+                        <div>
+                            <h3 class="inline">
+                                <p class="inline" id="currentTemp"></p>
+                            </h3>
+                        </div>
+                        <div>
+                            <h3 class="inline">
+                                <p class="inline" id="currentWind"></p>
+                            </h3>
+                        </div>
+                        <div>
+                            <h3 class="inline">
+                                <p class="inline" id="currentHum"> </p>
+                            </h3>
+                        </div>
+                        <div>
+                            <h3 class="inline">
+                                <p class="inline" id="currentUvi"></p>
+                            </h3>
+                        </div>
+                    </section>
+                </div>
+            
+                <div class="cell medium-4 large-1">
+                    <section style="background-color:grey; color: white;">
+                        <h1 id="date1"> <span id="icon1"></span></h1>
+                        <div>
+                            <h3 class="inline">
+                                <p class="inline" id="temp1"></p>
+                            </h3>
+                        </div>
+                        <div>
+                            <h3 class="inline">
+                                <p class="inline" id="wind1"></p>
+                            </h3>
+                        </div>
+                        <div>
+                            <h3 class="inline">
+                                <p class="inline" id="hum1"></p>
+                            </h3> 
+                        </div>
+                    </section>  
+                <div class="cell medium-6 large-1">
+                    <section style="background-color:grey; color: white;">
+                        <h1 id="date2"> <span id="icon2"></span></h1>
+                        <div>
+                            <h3 class="inline">
+                                <p class="inline" id="temp2"></p>
+                            </h3>
+                        </div>
+                        <div>
+                            <h3 class="inline">
+                                <p class="inline" id="wind2"></p>
+                            </h3>
+                        </div>
+                        <div>
+                            <h3 class="inline">
+                                <p class="inline" id="hum2"></p>
+                            </h3>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+    </main>
+
+    <!-- Import script tags -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <!-- <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH4yGqeZ9N7crT3pXL-WYtjUrsDua-oq4&callback=initMap"></script> -->
+</body>
+
+</html>
