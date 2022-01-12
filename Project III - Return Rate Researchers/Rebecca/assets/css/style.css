@@ -1,11 +1,11 @@
 /* styling */
 :root {
-    --background-color: #76a8ff;
+    --background-color: #c5b9b8;
     --background-text: white;
     --border-color: black;
     --inner-color: #F8F8FF;
-    --button-color: #30336b;
-    --hover-color: #6495ED;
+    --button-color: #3e2e24;
+    --hover-color: #88bcf4;
 }
 
 html,
@@ -17,7 +17,7 @@ main {
 }
 
 main {
-    background-color: #c8def0;
+    background-color: #eeeeee;
     height: auto;
     min-height: 100vh;
 }
@@ -45,24 +45,6 @@ main {
 .container {
     margin-left: 10px;
     margin-right: 10px;
-}
-
-.invalid-search {
-    border: solid red;
-    display: block;
-    padding: 0;
-    margin: 0;
-    background-color: red;
-    color: white;
-}
-
-.invalid-filter-input {
-    border: solid orange;
-    display: block;
-    padding: 0;
-    margin: 0;
-    background-color: orange;
-    color: white;
 }
 
 /* search button and input */
@@ -101,7 +83,7 @@ main {
 /* Itinerary formatting */
 .event {
     width: 100%;
-    background-color: #30336b;
+    background-color: #3e2e24;
     color: var(--background-text);
     border-radius: 3px;
     border-style: solid;
@@ -122,7 +104,7 @@ main {
 }
 
 #itinerary-title {
-    background-color: #76a8ff;
+    background-color: #c5b9b8;
     color: white;
     font-weight: 400;
     font-size: 20px;
@@ -139,4 +121,170 @@ main {
     padding: 0;
     margin: 0;
     border-radius: 5px;
+}
+
+#column-three {
+    width: 17%;
+    background-color: #88bcf4;
+    color: var(--background-text);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#currentTemp {
+    font-weight: bold;
+    font-size: 20px;
+}
+#currentWind {
+    font-weight: bold;
+    font-size: 20px;
+}
+#currentHum {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#currentUvi {
+    font-weight: bold;
+    font-size: 20px;
+}
+#forecast-1 {
+    width: 14%;
+    background-color: #74a2d3;
+    color: var(--background-text);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#temp1 {
+    font-weight: bold;
+    font-size: 16px;
+}
+#wind1 {
+    font-weight: bold;
+    font-size: 16px;
+}
+#hum1 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#forecast-2 {
+    width: 14%;
+    background-color: #74a2d3;
+    color: var(--background-text);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#temp2 {
+    font-weight: bold;
+    font-size: 16px;
+}
+#wind2 {
+    font-weight: bold;
+    font-size: 16px;
+}
+#hum2 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#forecast-3 {
+    width: 14%;
+    background-color: #74a2d3;
+    color: var(--background-text);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#temp3 {
+    font-weight: bold;
+    font-size: 16px;
+}
+#wind3 {
+    font-weight: bold;
+    font-size: 16px;
+}
+#hum3 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#forecast-4 {
+    width: 14%;
+    background-color: #74a2d3;
+    color: var(--background-text);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#temp4 {
+    font-weight: bold;
+    font-size: 16px;
+}
+#wind4 {
+    font-weight: bold;
+    font-size: 16px;
+}
+#hum4 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#forecast-5 {
+    width: 14%;
+    background-color: #74a2d3;
+    color: var(--background-text);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 23px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#temp5 {
+    font-weight: bold;
+    font-size: 16px;
+}
+#wind5 {
+    font-weight: bold;
+    font-size: 16px;
+}
+#hum5 {
+    font-weight: bold;
+    font-size: 16px;
 }
