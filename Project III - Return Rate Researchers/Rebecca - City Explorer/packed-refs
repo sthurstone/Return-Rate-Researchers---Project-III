@@ -1,0 +1,18 @@
+# pack-refs with: peeled fully-peeled sorted 
+c6ad0e0952b62414a064d49b5c7de4eac3571475 refs/remotes/origin/develop
+ddb9074493ad153cb44960c0d225f96becbfeb61 refs/remotes/origin/feature/api-logic
+e7b70224e5b733e46f83100ea86e71df92e4afe1 refs/remotes/origin/feature/ce-starter-code
+81cf0280bbb2819199558079d8911f5bfe874add refs/remotes/origin/feature/css
+e8c3756a0e2cae89cf270121f3d913a6c174a868 refs/remotes/origin/feature/develop-ready
+195391a0225e2d3fd1235b17ebc02f3741d7fafd refs/remotes/origin/feature/display-itin
+f478fe32226b20529365b50ac78c65a7dd1305a2 refs/remotes/origin/feature/error-handling
+ae92e82b5db2dc242d12681b6836b6320e2bec06 refs/remotes/origin/feature/filter
+6e0cfde009755fb847cc8b0da6401b7c189948b7 refs/remotes/origin/feature/final-css
+8da8822ef8d033e54d7c76b7dfa5083d966cd81a refs/remotes/origin/feature/html-structure
+9bdc8e610ec5e59d925d34ad5b57fc3b907f30b0 refs/remotes/origin/feature/local-storage
+d4ac68a85115ab678141e2844432d02d1b6736d8 refs/remotes/origin/feature/new-mockup
+158f9da5cab8537aeb5322c76e577d5c20e04fae refs/remotes/origin/feature/pseudo-code
+56a6260c2ef16958369210f356e7e3145b44a167 refs/remotes/origin/feature/search-history-style
+9562a6e5da416c61b7f6fb47490730cebbb4521c refs/remotes/origin/feature/updated-css
+a5df29e18a084db6f2a254f49ef482fec4919c61 refs/remotes/origin/feature/user-input
+2fcefb73dd3094676ae815c60b20e1a95601559c refs/remotes/origin/master
